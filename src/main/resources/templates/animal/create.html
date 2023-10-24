@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Creer un new animal</h1>
+    <form th:object="${animal}" th:action="@{/animal/create}" method="post">
+        <label>Nom : <input th:field="*{name}"></label>
+        <label>Couleur : <input th:field="*{color}"></label>
+        <button type="submit">Ajouter</button>
+    </form>
+    <a th:href="@{/animal}">Retour à la liste</a>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Info animal</h1>
+<h2 th:text="${animal.name}"/>
+<div th:if="${animal.color}">
+    <h3 th:text="${animal.color}"/>
+</div>
+<a th:href="@{/animal}">Retour a la liste</a>
+</body>
+</html>
